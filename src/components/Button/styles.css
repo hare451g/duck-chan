@@ -1,0 +1,27 @@
+.btn-naked {
+  background: none;
+  border: none;
+
+  color: #28bca3;
+
+  font-style: normal;
+  font-size: 14px;
+
+  line-height: 16px;
+
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-naked:hover {
+  background-color: #28bca3;
+  color: #fff;
+}
+
+.btn-naked:focus {
+  border: none;
+  outline: #28bca3;
+  color: #28bca3;
+}
