@@ -4,6 +4,7 @@ import Flex from '../components/Flex';
 import Thread from './Thread';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
+import NewThreadForm from './NewThreadForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         />
         <CommentForm threadName="KINO - Quibi Greenlights 'Tomie'" />
       </Flex>
+      <NewThreadForm />
     </>
   );
 }
