@@ -51,7 +51,7 @@ a:visited {
   color: var(--color-black);
 }
 
-.text-disabled {
+.text-muted {
   color: var(--color-gray);
 }
 
