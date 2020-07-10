@@ -73,24 +73,24 @@ a:visited {
   padding: 8px 16px;
 }
 
-/* Button Variants -- Primary*/
-.btn-primary {
+/* Button Variants -- Contained - primary*/
+.btn-contained.btn-primary {
   color: var(--color-white);
   background-color: var(--color-primary);
 }
 
-.btn-primary:hover {
+.btn-contained.btn-primary:hover {
   color: var(--color-white);
   background-color: var(--color-primary_dark);
 }
 
-/* Button Variants -- Secondary*/
-.btn-secondary {
+/* Button Variants -- Contained - secondary*/
+.btn-contained.btn-secondary {
   color: var(--color-white);
   background-color: var(--color-secondary);
 }
 
-.btn-secondary:hover {
+.btn-contained.btn-secondary:hover {
   color: var(--color-white);
   background-color: var(--color-secondary_dark);
 }
@@ -99,11 +99,22 @@ a:visited {
 .btn-naked {
   background: none;
   border: none;
+}
 
+.btn-naked.btn-primary {
   color: var(--color-primary);
 }
 
-.btn-naked:hover {
+.btn-naked.btn-primary:hover {
   background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-naked.btn-muted {
+  color: var(--color-gray);
+}
+
+.btn-naked.btn-muted:hover {
+  background-color: var(--color-gray);
   color: var(--color-white);
 }

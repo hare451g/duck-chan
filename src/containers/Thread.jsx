@@ -38,7 +38,7 @@ function Thread({
         </Box>
       </Flex>
       <Flex justify="flex-end" width="100%">
-        <Button variant="naked" onClick={onReplyClick}>
+        <Button variant="naked" color="primary" onClick={onReplyClick}>
           Reply
         </Button>
       </Flex>
