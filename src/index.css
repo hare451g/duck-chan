@@ -10,9 +10,7 @@
   /* Variables -- fonts */
   --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  --font-sans_serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  --font-sans_serif: -apple-system, 'Inter', sans-serif;
 }
 
 /* Implementatations */
