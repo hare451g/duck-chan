@@ -22,8 +22,8 @@ function App() {
           content="Johnson-McGoldrick co-wrote Aquaman, which grossed over $1 billion worldwide and he is currently writing its sequel. "
         />
         <CommentForm threadName="KINO - Quibi Greenlights 'Tomie'" />
+        <NewThreadForm />
       </Flex>
-      <NewThreadForm />
     </>
   );
 }

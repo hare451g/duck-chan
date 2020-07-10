@@ -8,12 +8,13 @@ import Button from '../components/Button';
 
 function NewThreadForm() {
   return (
-    <Flex direction="column" padding="0 16px">
-      <Text fontSize="14px" fontWeight="bold" margin="8px 0px">
+    <Flex direction="column">
+      <Text fontSize="14px" fontWeight="bold">
         Post New Thread
       </Text>
+
       <Flex direction="column" margin="16px 0">
-        <Text fontSize="14px" fontWeight="bold" margin="8px 0px">
+        <Text fontSize="14px" fontWeight="bold">
           Title
         </Text>
         <TextInput type="text" />
@@ -24,12 +25,14 @@ function NewThreadForm() {
         </Text>
         <TextInput type="text" />
       </Flex>
+
       <Flex direction="column" margin="16px 0">
         <Text fontSize="14px" fontWeight="bold" margin="8px 0px">
           Content
         </Text>
         <Textarea placeholder="Write your thread" />
       </Flex>
+
       <Flex justify="flex-end" align="center" margin="8px 0px">
         <Button variant="naked" color="muted">
           cancel
