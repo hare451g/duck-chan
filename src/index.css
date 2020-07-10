@@ -1,13 +1,55 @@
+/* Variable Definitions */
+:root {
+  /* Variables -- Color */
+  --color-primary: #28bca3;
+  --color-secondary: #7239b3;
+  --color-black: #1a1a1a;
+  --color-gray: #7e8087;
+  --color-white: #fafafa;
+
+  /* Variables -- fonts */
+  --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  --font-sans_serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Implementatations */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-sans_serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font-monospace);
+}
+
+/* Anchor */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-secondary);
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-body {
+  color: var(--color-black);
+}
+
+.text-disabled {
+  color: var(--color-gray);
 }

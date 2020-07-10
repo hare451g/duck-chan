@@ -1,27 +1,55 @@
-.btn-naked {
-  background: none;
+/* Base Button */
+.btn {
   border: none;
-
-  color: #28bca3;
+  border-radius: 8px;
 
   font-style: normal;
   font-size: 14px;
+  font-weight: 600;
 
   line-height: 16px;
-
   text-transform: uppercase;
   cursor: pointer;
 
   transition: 0.2s;
+
+  padding: 8px 16px;
+}
+
+/* Button Variants */
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  color: var(--color-white);
+  background-color: #0e9a83;
+}
+
+.btn-secondary {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  color: var(--color-white);
+  background-color: #452981;
+}
+
+.btn-naked {
+  background: none;
+  border: none;
+
+  color: var(--color-primary);
 }
 
 .btn-naked:hover {
-  background-color: #28bca3;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-naked:focus {
-  border: none;
-  outline: #28bca3;
-  color: #28bca3;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }

@@ -1,13 +1,28 @@
 import React from 'react';
-import './styles.css';
 
-const containerStyles = {
-  border: '1px solid #acacac',
-  borderRadius: '4px',
-};
+function Box({
+  children,
+  width,
+  height,
+  border,
+  borderRadius,
+  background,
+  ...rest
+}) {
+  const styles = {
+    width,
+    height,
+    border: border || 'none',
+    borderRadius,
+    background,
+    ...rest.style,
+  };
 
-function Box({ children, ...rest }) {
-  return <div style={{ ...containerStyles, ...rest.style }}>{children}</div>;
+  return (
+    <div style={styles} {...rest}>
+      {children}
+    </div>
+  );
 }
 
 export default Box;
