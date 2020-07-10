@@ -1,20 +1,19 @@
 import React from 'react';
+import Box from './Box';
 
-function Flex({ children, direction, align, justify, width, height, ...rest }) {
+function Flex({ children, direction, align, justify, ...rest }) {
   const styles = {
     display: 'flex',
     flexDirection: direction || 'row',
     alignItems: align,
-    justifyContents: justify,
-    width,
-    height,
-    ...rest.style,
+    justifyContent: justify,
+    ...rest,
   };
 
   return (
-    <div style={styles} {...rest}>
+    <Box style={styles} {...rest}>
       {children}
-    </div>
+    </Box>
   );
 }
 

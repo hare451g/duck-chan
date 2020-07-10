@@ -7,6 +7,8 @@ function Box({
   border,
   borderRadius,
   background,
+  margin,
+  padding,
   ...rest
 }) {
   const styles = {
@@ -15,6 +17,8 @@ function Box({
     border: border || 'none',
     borderRadius,
     background,
+    margin,
+    padding,
     ...rest.style,
   };
 

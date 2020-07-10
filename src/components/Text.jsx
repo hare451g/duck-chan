@@ -3,6 +3,7 @@ import React from 'react';
 function Text({
   fontSize = '16px',
   fontWeight = 400,
+  lineHeight = 'auto',
   color = 'body',
   padding,
   margin,
