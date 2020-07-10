@@ -2,12 +2,12 @@ import React from 'react';
 import './styles.css';
 
 const containerStyles = {
-  padding: '16px 8px',
-  border: '1px solid gainsboro',
+  border: '1px solid #acacac',
+  borderRadius: '4px',
 };
 
-function Box({ children, style }) {
-  return <div style={{ ...containerStyles, ...style }}>{children}</div>;
+function Box({ children, ...rest }) {
+  return <div style={{ ...containerStyles, ...rest.style }}>{children}</div>;
 }
 
 export default Box;
