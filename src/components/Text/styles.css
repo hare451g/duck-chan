@@ -1,0 +1,41 @@
+/* Text Colors */
+.text-primary {
+  color: #28bca3;
+}
+
+.text-secondary {
+  color: #7239b3;
+}
+
+.text-body {
+  color: #1a1a1a;
+}
+
+.text-disabled {
+  color: #7e8087;
+}
+
+/* Heading */
+.heading-1 {
+  font-size: 72px;
+}
+
+.heading-2 {
+  font-size: 56px;
+}
+
+.heading-3 {
+  font-size: 42px;
+}
+
+.heading-4 {
+  font-size: 36px;
+}
+
+.heading-5 {
+  font-size: 24px;
+}
+
+.heading-6 {
+  font-size: 18px;
+}
