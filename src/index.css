@@ -11,6 +11,7 @@
   --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
   --font-sans_serif: -apple-system, 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
 /* Implementatations */

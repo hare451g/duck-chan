@@ -1,18 +1,24 @@
 import React from 'react';
 
-function Text({ color = 'body', heading = false, children, ...rest }) {
-  const className = `text-${color}`;
-
-  if (heading) {
-    return (
-      <h1 className={`heading-${heading} ${className}`} {...rest}>
-        {children}
-      </h1>
-    );
-  }
+function Text({
+  fontSize = '16px',
+  fontWeight = 400,
+  color = 'body',
+  padding,
+  margin,
+  children,
+  ...rest
+}) {
+  const styles = {
+    fontSize,
+    fontWeight,
+    color,
+    padding,
+    margin,
+  };
 
   return (
-    <span className={className} {...rest}>
+    <span style={styles} className={`text-${color}`} {...rest}>
       {children}
     </span>
   );
