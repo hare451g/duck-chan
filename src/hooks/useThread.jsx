@@ -5,11 +5,40 @@ function useThread(initialThreads = []) {
   const [selected, setSelected] = useState([]);
 
   const onThreadSelected = (index) => {
-    setSelected(threads[index]);
+    setSelected(threads[index] || {});
   };
 
   const onCreateThread = ({ title, name, content }) => {
-    setThreads([...threads, { title, name, content }]);
+    setThreads([
+      ...threads,
+      {
+        createdAt: new Date().toISOString(),
+        comments: [],
+        title,
+        name,
+        content,
+      },
+    ]);
+  };
+
+  const onPostComment = ({ threadIndex, content }) => {
+    const comment = {
+      sender: 'anon',
+      createdAt: new Date().toISOString(),
+      content,
+    };
+
+    setThreads(
+      threads.map((thread, index) => {
+        if (threadIndex === index) {
+          return {
+            ...thread,
+            comments: [...thread.comments, comment],
+          };
+        }
+        return thread;
+      })
+    );
   };
 
   return {
@@ -17,6 +46,7 @@ function useThread(initialThreads = []) {
     selected,
     onThreadSelected,
     onCreateThread,
+    onPostComment,
   };
 }
 

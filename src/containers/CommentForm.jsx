@@ -8,10 +8,11 @@ import useForm from '../hooks/useForm';
 
 function CommentForm({
   threadName = 'untitled',
+  threadIndex = 0,
   onCancel = () => {},
   onPost = () => {},
 }) {
-  const [comment, setComment] = useForm('');
+  const [content, setContent] = useForm('');
   return (
     <Flex direction="column" margin="16px 0 0 48px">
       <Text fontSize="14px" fontWeight="bold" margin="8px 0px">
@@ -19,14 +20,18 @@ function CommentForm({
       </Text>
       <Textarea
         placeholder="Write comments . . . "
-        value={comment}
-        onChange={setComment}
+        value={content}
+        onChange={setContent}
       />
       <Flex justify="flex-end" align="center" margin="8px 0px">
         <Button variant="naked" color="muted" onClick={onCancel}>
           cancel
         </Button>
-        <Button variant="naked" color="primary" onClick={onPost}>
+        <Button
+          variant="naked"
+          color="primary"
+          onClick={() => onPost({ threadIndex, content })}
+        >
           post
         </Button>
       </Flex>

@@ -1,32 +1,26 @@
 import React from 'react';
 
 import Flex from '../components/Flex';
-import Thread from './Thread';
-import Comment from './Comment';
-import CommentForm from './CommentForm';
-import NewThreadForm from './NewThreadForm';
 import Heading from '../components/Heading';
+import useThread from '../hooks/useThread';
+
+import ThreadList from './ThreadList';
 
 function App() {
+  const { threads, selected, onThreadSelected, onPostComment } = useThread([]);
+
   return (
     <>
       <Flex direction="column" margin="auto" maxWidth="calc(100vw - 64px)">
         <Heading color="primary" fontSize="24px" fontWeight="bold">
           duck-chan
         </Heading>
-        <Thread
-          title="KINO - Quibi Greenlights 'Tomie'"
-          sender="anon"
-          createdAt="07/07/2020 - 20:03:12"
-          content="Written by Johnson-McGoldrick, Tomie is the story of a beautiful high school girl (Rudolph) who goes missing and pieces of her body are discovered scattered around a small town. But what starts out as a murder mystery turns into something even more horrific."
+        <ThreadList
+          threads={threads}
+          onThreadSelected={onThreadSelected}
+          selected={selected}
+          onPostComment={onPostComment}
         />
-        <Comment
-          sender="anon"
-          createdAt="07/07/2020 - 20:03:12"
-          content="Johnson-McGoldrick co-wrote Aquaman, which grossed over $1 billion worldwide and he is currently writing its sequel. "
-        />
-        <CommentForm threadName="KINO - Quibi Greenlights 'Tomie'" />
-        <NewThreadForm />
       </Flex>
     </>
   );

@@ -11,6 +11,7 @@ function Thread({
   createdAt = 'n/a',
   content = '',
   onReplyClick = () => {},
+  index,
 }) {
   return (
     <Box
@@ -38,7 +39,11 @@ function Thread({
         </Box>
       </Flex>
       <Flex justify="flex-end" width="100%">
-        <Button variant="naked" color="primary" onClick={onReplyClick}>
+        <Button
+          variant="naked"
+          color="primary"
+          onClick={() => onReplyClick(index)}
+        >
           Reply
         </Button>
       </Flex>

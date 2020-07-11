@@ -9,7 +9,7 @@ function Comment({ sender = 'anon', createdAt = 'n/a', content = '' }) {
       border="1px solid #ACACAC"
       borderRadius="4px"
       padding="8px 8px"
-      margin="0 0 0 48px"
+      margin="0 0 16px 48px"
     >
       <Flex direction="column">
         <Text fontSize="14px" fontWeight="normal" color="muted">
