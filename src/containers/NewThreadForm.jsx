@@ -14,7 +14,7 @@ function NewThreadForm() {
       </Text>
 
       <Flex direction="column" margin="16px 0">
-        <Text fontSize="14px" fontWeight="bold">
+        <Text fontSize="14px" fontWeight="bold" margin="8px 0px">
           Title
         </Text>
         <TextInput type="text" />
