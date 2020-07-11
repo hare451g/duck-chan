@@ -5,11 +5,15 @@ import Thread from './Thread';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
 import NewThreadForm from './NewThreadForm';
+import Heading from '../components/Heading';
 
 function App() {
   return (
     <>
-      <Flex direction="column" margin="0px 16px">
+      <Flex direction="column" margin="auto" maxWidth="calc(100vw - 64px)">
+        <Heading color="primary" fontSize="24px" fontWeight="bold">
+          duck-chan
+        </Heading>
         <Thread
           title="KINO - Quibi Greenlights 'Tomie'"
           sender="anon"
