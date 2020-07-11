@@ -10,7 +10,8 @@ function Thread({
   sender = 'anon',
   createdAt = 'n/a',
   content = '',
-  onReplyClick = () => {},
+  onDetailsClick = () => {},
+  isDetail = false,
   index,
 }) {
   return (
@@ -39,13 +40,15 @@ function Thread({
         </Box>
       </Flex>
       <Flex justify="flex-end" width="100%">
-        <Button
-          variant="naked"
-          color="primary"
-          onClick={() => onReplyClick(index)}
-        >
-          Reply
-        </Button>
+        {!isDetail && (
+          <Button
+            variant="naked"
+            color="primary"
+            onClick={() => onDetailsClick(index)}
+          >
+            show thread
+          </Button>
+        )}
       </Flex>
     </Box>
   );

@@ -2,10 +2,11 @@ import { useState } from 'react';
 
 function useThread(initialThreads = []) {
   const [threads, setThreads] = useState(initialThreads);
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState();
 
   const onThreadSelected = (index) => {
-    setSelected(threads[index] || {});
+    console.log(index);
+    setSelected(index);
   };
 
   const onCreateThread = ({ title, name, content }) => {
@@ -22,22 +23,33 @@ function useThread(initialThreads = []) {
   };
 
   const onPostComment = ({ threadIndex, content }) => {
+    console.log(threadIndex, content);
     const comment = {
       sender: 'anon',
       createdAt: new Date().toISOString(),
       content,
     };
 
+    console.log(
+      threads.map((thread, index) =>
+        threadIndex === index
+          ? {
+              ...thread,
+              comments: [...thread.comments, comment],
+            }
+          : thread
+      )
+    );
+
     setThreads(
-      threads.map((thread, index) => {
-        if (threadIndex === index) {
-          return {
-            ...thread,
-            comments: [...thread.comments, comment],
-          };
-        }
-        return thread;
-      })
+      threads.map((thread, index) =>
+        threadIndex === index
+          ? {
+              ...thread,
+              comments: [...thread.comments, comment],
+            }
+          : thread
+      )
     );
   };
 
