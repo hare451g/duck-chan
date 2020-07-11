@@ -7,9 +7,6 @@ import Button from '../components/Button';
 import useThread from '../hooks/useThread';
 import useToggle from '../hooks/useToggle';
 
-// mocks
-import mockThreads from '../threads.mock';
-
 import ThreadList from './ThreadList';
 import NewThreadForm from './NewThreadForm';
 import ThreadDetails from './ThreadDetails';
