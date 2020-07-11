@@ -43,10 +43,14 @@ function NewThreadForm({ onPost = () => {}, onCancel = () => {} }) {
       </Flex>
 
       <Flex justify="flex-end" align="center" margin="8px 0px">
-        <Button variant="naked" color="muted" onCancel={onCancel}>
+        <Button variant="naked" color="muted" onClick={onCancel}>
           cancel
         </Button>
-        <Button variant="naked" color="primary" onClick={onPost}>
+        <Button
+          variant="naked"
+          color="primary"
+          onClick={() => onPost({ title, name, content })}
+        >
           post
         </Button>
       </Flex>
