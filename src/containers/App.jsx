@@ -21,7 +21,7 @@ function App() {
     onCreateThread,
     onThreadSelected,
     onPostComment,
-  } = useThread(mockThreads);
+  } = useThread([]);
 
   const [isThreadFormVisible, toggleThreadForm] = useToggle(false);
 
@@ -34,7 +34,10 @@ function App() {
     <>
       <Flex direction="column" margin="auto" maxWidth="420px">
         <Heading color="primary" fontSize="24px" fontWeight="bold">
-          duck-chan
+          <span role="img" aria-label="duck">
+            🦆
+          </span>
+          -chan
         </Heading>
         {isThreadFormVisible ? (
           <NewThreadForm onCancel={toggleThreadForm} onPost={onPost} />
@@ -47,10 +50,10 @@ function App() {
           />
         ) : (
           <>
+            <ThreadList threads={threads} onThreadSelected={onThreadSelected} />
             <Button variant="naked" color="primary" onClick={toggleThreadForm}>
               Create New Thread
             </Button>
-            <ThreadList threads={threads} onThreadSelected={onThreadSelected} />
           </>
         )}
       </Flex>

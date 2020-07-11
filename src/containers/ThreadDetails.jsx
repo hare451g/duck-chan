@@ -15,13 +15,6 @@ function ThreadDetails({
 }) {
   return (
     <Flex direction="column">
-      <Button
-        onClick={() => onThreadSelected(null)}
-        variant="naked"
-        color="primary"
-      >
-        Back to Threads
-      </Button>
       <Thread {...selectedThread} isDetail />
       <CommentList comments={selectedThread.comments} />
       <CommentForm
@@ -30,6 +23,13 @@ function ThreadDetails({
         onPost={onPostComment}
         onCancel={() => onThreadSelected(null)}
       />
+      <Button
+        onClick={() => onThreadSelected(null)}
+        variant="naked"
+        color="primary"
+      >
+        Back to Threads
+      </Button>
     </Flex>
   );
 }
