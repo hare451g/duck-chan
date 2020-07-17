@@ -1,4 +1,5 @@
 import React from 'react';
+import './Textarea.css';
 
 function Textarea({
   minHeight,
@@ -10,14 +11,14 @@ function Textarea({
   ...rest
 }) {
   const styles = {
-    minHeight: minHeight || '95px',
-    border: border || '1px solid var(--color-gray)',
-    borderRadius: borderRadius || '4px',
-    padding: padding || '16px',
-    fontSize: fontSize || '14px',
+    minHeight,
+    border,
+    borderRadius,
+    padding,
+    fontSize,
   };
 
-  return <textarea style={styles} {...rest} />;
+  return <textarea style={styles} className="textarea" {...rest} />;
 }
 
 export default Textarea;

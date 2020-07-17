@@ -1,0 +1,19 @@
+.heading {
+  margin-bottom: 4px;
+}
+
+.thread-label {
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-black);
+}
+
+.thread-content {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}

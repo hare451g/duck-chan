@@ -1,4 +1,5 @@
 import React from 'react';
+import './TextInput.css';
 
 function TextInput({
   minHeight,
@@ -10,14 +11,14 @@ function TextInput({
   ...rest
 }) {
   const styles = {
-    minHeight: minHeight || '24px',
-    border: border || '1px solid var(--color-gray)',
-    borderRadius: borderRadius || '4px',
-    padding: padding || '8px',
-    fontSize: fontSize || '14px',
+    minHeight,
+    border,
+    borderRadius,
+    padding,
+    fontSize,
   };
 
-  return <input style={styles} {...rest} />;
+  return <input style={styles} className="text-input" {...rest} />;
 }
 
 export default TextInput;

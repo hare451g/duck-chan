@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Box.css';
+
 function Box({
   children,
   width,
@@ -9,12 +11,12 @@ function Box({
   background,
   margin,
   padding,
+  isBordered,
   ...rest
 }) {
   const styles = {
     width,
     height,
-    border: border || 'none',
     borderRadius,
     background,
     margin,
@@ -22,8 +24,10 @@ function Box({
     ...rest.style,
   };
 
+  const className = `box ${isBordered && 'is-bordered'}`;
+
   return (
-    <div style={styles} {...rest}>
+    <div className={className} style={styles} {...rest}>
       {children}
     </div>
   );

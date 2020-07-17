@@ -1,10 +1,11 @@
 import React from 'react';
+import './Text.css';
 
 function Text({
-  fontSize = '16px',
-  fontWeight = 400,
-  lineHeight = 'auto',
-  color = 'body',
+  fontSize,
+  fontWeight,
+  lineHeight,
+  color,
   padding,
   margin,
   children,

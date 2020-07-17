@@ -1,0 +1,9 @@
+.box {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.box.is-bordered {
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+}

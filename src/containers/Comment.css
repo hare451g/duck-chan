@@ -1,0 +1,19 @@
+.box {
+  margin-bottom: 12px;
+  padding: 16px;
+}
+
+.comment-label {
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-black);
+}
+
+.comment-content {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-body);
+}

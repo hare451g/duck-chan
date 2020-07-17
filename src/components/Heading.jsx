@@ -1,23 +1,17 @@
 import React from 'react';
+import './Heading.css';
 
-function Heading({
-  fontSize = '16px',
-  fontWeight = 400,
-  color = 'body',
-  padding,
-  margin,
-  children,
-  ...rest
-}) {
+function Heading({ color, children, margin, padding, ...rest }) {
   const styles = {
-    fontSize,
-    fontWeight,
     color,
     padding,
     margin,
   };
+
+  const colorClass = color ? `text-${color}` : '';
+
   return (
-    <h2 style={styles} className={`text-${color}`} {...rest}>
+    <h2 style={styles} className={`heading ${colorClass}`} {...rest}>
       {children}
     </h2>
   );

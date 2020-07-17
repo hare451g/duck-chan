@@ -3,28 +3,16 @@ import Flex from '../components/Flex';
 import Box from '../components/Box';
 import Text from '../components/Text';
 
+import './Comment.css';
+
 function Comment({ sender = 'anon', createdAt = 'n/a', content = '' }) {
   return (
-    <Box
-      border="1px solid #ACACAC"
-      borderRadius="4px"
-      padding="8px 8px"
-      margin="0 0 16px 48px"
-    >
+    <Box isBordered>
       <Flex direction="column">
-        <Text fontSize="14px" fontWeight="normal" color="muted">
+        <Text className="comment-label">
           {sender} - {createdAt}
         </Text>
-        <Box padding="16px 0">
-          <Text
-            fontSize="14px"
-            fontWeight="normal"
-            color="body"
-            lineHeight="20px"
-          >
-            {content}
-          </Text>
-        </Box>
+        <Text className="comment-content">{content}</Text>
       </Flex>
     </Box>
   );

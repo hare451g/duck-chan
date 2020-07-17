@@ -5,6 +5,8 @@ import Heading from '../components/Heading';
 import Text from '../components/Text';
 import Button from '../components/Button';
 
+import './Thread.css';
+
 function Thread({
   title = 'untitled',
   sender = 'anon',
@@ -15,29 +17,13 @@ function Thread({
   index,
 }) {
   return (
-    <Box
-      border="1px solid #ACACAC"
-      borderRadius="4px"
-      padding="8px 8px"
-      margin="16px 0px"
-    >
+    <Box isBordered>
       <Flex direction="column">
-        <Heading fontSize="18px" fontWeight="bold" color="heading">
-          {title}
-        </Heading>
-        <Text fontSize="14px" fontWeight="normal" color="muted">
+        <Heading>{title}</Heading>
+        <Text className="thread-label">
           {sender} - {createdAt}
         </Text>
-        <Box padding="16px 0">
-          <Text
-            fontSize="14px"
-            fontWeight="normal"
-            color="body"
-            lineHeight="20px"
-          >
-            {content}
-          </Text>
-        </Box>
+        <Text className="thread-content">{content}</Text>
       </Flex>
       <Flex justify="flex-end" width="100%">
         {!isDetail && (
