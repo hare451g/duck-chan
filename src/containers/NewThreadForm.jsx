@@ -14,10 +14,6 @@ function NewThreadForm({ onPost = () => {}, onCancel = () => {} }) {
 
   return (
     <Flex direction="column">
-      <Text fontSize="14px" fontWeight="bold">
-        Post New Thread
-      </Text>
-
       <Flex direction="column" margin="16px 0">
         <Text fontSize="14px" fontWeight="bold" margin="8px 0px">
           Title

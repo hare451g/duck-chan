@@ -2,8 +2,8 @@ import React from 'react';
 
 import Flex from '../components/Flex';
 import Button from '../components/Button';
+import Thread from '../components/Thread';
 
-import Thread from './Thread';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 

@@ -2,8 +2,7 @@ import React from 'react';
 
 import Flex from '../components/Flex';
 import Text from '../components/Text';
-
-import Thread from './Thread';
+import Thread from '../components/Thread';
 
 function ThreadList({ threads = [], onThreadSelected = () => {} }) {
   if (threads.length > 0) {

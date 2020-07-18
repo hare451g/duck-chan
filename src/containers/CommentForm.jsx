@@ -14,8 +14,8 @@ function CommentForm({
 }) {
   const [content, setContent] = useForm('');
   return (
-    <Flex direction="column" margin="16px 0 0 48px">
-      <Text fontSize="14px" fontWeight="bold" margin="8px 0px">
+    <Flex direction="column" margin="16px 0 0 40px">
+      <Text fontSize="14px" fontWeight="bold" margin="8px 0">
         Reply to: {threadName}
       </Text>
       <Textarea
@@ -23,7 +23,7 @@ function CommentForm({
         value={content}
         onChange={setContent}
       />
-      <Flex justify="flex-end" align="center" margin="8px 0px">
+      <Flex justify="flex-end" align="center" margin="8px 0">
         <Button variant="naked" color="muted" onClick={onCancel}>
           cancel
         </Button>

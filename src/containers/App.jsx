@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Flex direction="column" margin="auto" maxWidth="420px">
-        <Heading color="primary" fontSize="24px" fontWeight="bold">
+        <Heading isSiteTitle>
           <span role="img" aria-label="duck">
             🦆
           </span>

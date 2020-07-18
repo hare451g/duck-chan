@@ -1,8 +1,10 @@
 import React from 'react';
+
 import './Button.css';
 
 function Button({ children, variant = '', color = '', ...rest }) {
   const variantClass = variant ? `btn-${variant}` : '';
+
   const colorClass = variant ? `btn-${color}` : '';
 
   return (

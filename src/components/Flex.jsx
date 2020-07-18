@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './Flex.css';
 
 function Flex({ children, direction, align, justify, maxWidth, ...rest }) {
