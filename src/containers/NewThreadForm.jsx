@@ -1,10 +1,9 @@
 import React from 'react';
 
-import Flex from '../components/Flex';
-import Text from '../components/Text';
-import TextInput from '../components/TextInput';
-import Textarea from '../components/Textarea';
-import Button from '../components/Button';
+// components
+import { Flex, Text, TextInput, Textarea, Button } from '../components';
+
+// hooks
 import useForm from '../hooks/useForm';
 
 function NewThreadForm({ onPost = () => {}, onCancel = () => {} }) {

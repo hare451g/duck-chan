@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Flex from '../components/Flex';
-import Heading from '../components/Heading';
-import Button from '../components/Button';
+import { Flex, Heading, Button } from '../components';
 
 import useThread from '../hooks/useThread';
 import useToggle from '../hooks/useToggle';

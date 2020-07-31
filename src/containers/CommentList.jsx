@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Comment from '../components/Comment';
+import { Comment } from '../components';
 
 function CommentList({ comments, threadIndex }) {
   return comments.map(({ sender, createdAt, content }, index) => (
