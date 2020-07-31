@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { Flex, Button, Thread } from '../components';
-
-import CommentList from './CommentList';
-import CommentForm from './CommentForm';
+import { CommentList, CommentForm } from './index';
 
 function ThreadDetails({
   selected,

@@ -1,13 +1,9 @@
 import React from 'react';
 
+import { useThread, useToggle } from '../hooks';
 import { Flex, Heading, Button } from '../components';
 
-import useThread from '../hooks/useThread';
-import useToggle from '../hooks/useToggle';
-
-import ThreadList from './ThreadList';
-import NewThreadForm from './NewThreadForm';
-import ThreadDetails from './ThreadDetails';
+import { ThreadList, NewThreadForm, ThreadDetails } from './index';
 
 function App() {
   const {

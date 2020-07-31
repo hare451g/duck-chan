@@ -4,7 +4,7 @@ import React from 'react';
 import { Flex, Text, TextInput, Textarea, Button } from '../components';
 
 // hooks
-import useForm from '../hooks/useForm';
+import { useForm } from '../hooks';
 
 function NewThreadForm({ onPost = () => {}, onCancel = () => {} }) {
   const [title, setTitle] = useForm('');

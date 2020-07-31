@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Flex, Textarea, Text, Button, useForm } from '../components';
+import { useForm } from '../hooks';
+import { Flex, Textarea, Text, Button } from '../components';
 
 function CommentForm({
   threadName = 'untitled',
